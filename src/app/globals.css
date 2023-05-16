@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* ------------------------------------------------------------ */
 /* styles/global.css */
 
 html {
@@ -9,28 +24,23 @@ html {
   /* This makes sure that the PDF is rendered exactly like our layout. */
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  background: #f1f5f9;
-  /* Light gray background */
-  width: 100%;
-  height: 100%;
+@page {
+  size: A4;
+  margin: 40px 20px;
+
 }
 
-/* Next.js mounting point. Create a full width/height container for our page. */
-#__next {
-  height: 100vh;
-  display: grid;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 /* Important to keep absolute as you don't want this to be rendered by the PDF. */
 .downloadBtn {
-  position: absolute;
-  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  height: 100%;
 }
+
+
+
+
+
