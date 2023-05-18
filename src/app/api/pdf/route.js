@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer'
 
 export async function GET(request) {
 
-  const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
   await page.goto('https://pdf-from-html-by-pptr.vercel.app/')
