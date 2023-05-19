@@ -6,7 +6,7 @@ export async function GET(request) {
   const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
   const page = await browser.newPage()
 
-  await page.goto('https://pdf-from-html-by-pptr.vercel.app', {waitUntil: 'networkidle2'})
+  await page.goto('https://pdf-from-html-by-pptr.vercel.app/')
   await page.emulateMediaType('screen');
 
   const pdfBuffer = await page.pdf({
