@@ -7,7 +7,7 @@ export default function Home() {
     <>
    
       {/* ---------------------------------------------------------- */}
-      <Image key={imageURL} src={imageURL} width={1280} height={720} alt='image Upload' />
+      {/* <Image key={imageURL} src={imageURL} width={1280} height={720} alt='image Upload' />
 
       <div className={styles.inputArea}>
         <input
@@ -17,7 +17,7 @@ export default function Home() {
           placeholder="Enter a website URL"
         />
         <button onClick={submitWebsiteURL}>Submit URL</button>
-      </div>
+      </div> */}
       {/* ---------------------------------------------------------- */}
 
 
